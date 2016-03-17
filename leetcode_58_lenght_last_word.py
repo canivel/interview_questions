@@ -12,20 +12,22 @@ return 5.
 '''
 
 class Solution(object):
+    # def lengthOfLastWord(self, s):
+    #     r = s.split(' ')
+    #     if not r:
+    #         return 0
+    #
+    #     result = 0
+    #     for i in range(len(r), 0, -1):
+    #         if len(r[i-1]) == 0:
+    #             continue
+    #         else:
+    #             result = len(r[i-1])
+    #             break
+    #
+    #     return result
     def lengthOfLastWord(self, s):
-        r = s.split(' ')
-        if not r:
-            return 0
-
-        result = 0
-        for i in range(len(r), 0, -1):
-            if len(r[i-1]) == 0:
-                continue
-            else:
-                result = len(r[i-1])
-                break
-
-        return result
+        return len(s.rstrip(' ').split(' ')[-1])
 
 
 if __name__ == "__main__":
