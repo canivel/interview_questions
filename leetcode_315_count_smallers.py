@@ -45,12 +45,29 @@ class Solution(object):
     #         ans.append(self.getSum(T, num-1))
     #         self.update(T, num, 1)
     #     return ans[::-1]
-    pass
+
+    def countSmaller(self, nums):
+        if not nums:
+            return [0]
+        if len(nums) <= 1:
+            return [0]
+        result = []
+        for i in nums:
+            s = nums[nums.index(i):]
+            for j in s:
+                if j < i:
+                    result.append(j)
+
+        if len(result) > 0:
+            result[-1] = 0
+        else:
+            return [0]
+
+        return result
 
 
 if __name__ == "__main__":
     s =  Solution()
     a = [5, 2, 6, 1]
-
-    #a = []
+    #a = [-1, -1]
     print (s.countSmaller(a))
