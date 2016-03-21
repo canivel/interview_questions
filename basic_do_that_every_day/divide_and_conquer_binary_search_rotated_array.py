@@ -2,15 +2,18 @@ __author__ = 'canivel'
 
 
 class Solution(object):
-    # binary search O(logn)
+    # binary search O(logn) do not work for duplicates
     def findMinElementBinarySearch(self, l, x):
         low = 0
         count = len(l)
         high = count - 1
         while low <= high:
+
             mid = (low + high) / 2
+
             if (l[mid] == x):
                 return mid
+
             if(l[mid] <= l[high]):
                 if(x > l[mid] and x <= l[high]):
                     low = mid + 1

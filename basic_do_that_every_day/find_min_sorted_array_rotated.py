@@ -13,7 +13,7 @@ class Solution(object):
         return m
     #or return min(m)
 
-    #binary search O(logn)
+    #binary search O(logn) do not work for duplicates
     def findMinElementBinarySearch(self, l):
         low = 0
         count = len(l)
