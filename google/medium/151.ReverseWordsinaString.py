@@ -18,6 +18,5 @@ class Solution(object):
 
 
 s = "the sky is blue"
-s = "    "
 so = Solution()
 print so.reverseWords(s)

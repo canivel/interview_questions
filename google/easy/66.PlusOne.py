@@ -11,9 +11,17 @@ class Solution(object):
         :type digits: List[int]
         :rtype: List[int]
         """
-        num = int(''.join(str(i) for i in digits))
-        s = str(num+1)
-        return [int(i) for i in list(s)]
+        # num = int(''.join(str(i) for i in digits))
+        # s = str(num+1)
+        # return [int(i) for i in list(s)]
+
+        # n = int(''.join(str(i) for i in digits))
+        # s = str(n+1)
+        # return [int(i) for i in s]
+
+       
+
+
 
 l = [3,6,9,1,2,3,4,5,10000000, 23,3333333]
 s = Solution()

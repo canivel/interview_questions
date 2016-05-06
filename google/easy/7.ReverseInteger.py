@@ -11,14 +11,17 @@ class Solution(object):
         :rtype: int
         """
         #overflow
-        if x < -2147483647 or x > 2147483647:
-            return 0
-
+        r = 0
         if x < 0:
             x = abs(x)
-            return -int(''.join(list(str(x))[::-1]))
+            r = -int(''.join(list(str(x))[::-1]))
         else:
-            return int(''.join(list(str(x))[::-1]))
+            r = int(''.join(list(str(x))[::-1]))
+
+        if r < -2147483647 or r > 2147483647:
+            return 0
+        else:
+            return r
 
 
 x = -123
