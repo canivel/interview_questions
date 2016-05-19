@@ -6,9 +6,11 @@ start = time.time()
 a=0
 b=1
 for i in range(10):
-    print (b)
     b = a+b
     a = b-a
+    print (a)
+
+exit()
 
 #### 2 ####
 # r=10

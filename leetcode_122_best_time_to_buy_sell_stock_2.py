@@ -8,6 +8,7 @@ However, you may not engage in multiple transactions at the same time (ie, you m
 
 class Solution(object):
     def maxProfit(self, prices):
+        print zip(prices[1:], prices[:-1])
         return sum( max(0, i-j) for i, j in zip(prices[1:], prices[:-1]) )
 
 nums = [2, 1, 5, 6, 7, 3, 1, 0, 3]

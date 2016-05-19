@@ -11,13 +11,28 @@ class Solution(object):
         :type digits: List[int]
         :rtype: List[int]
         """
-        # num = int(''.join(str(i) for i in digits))
-        # s = str(num+1)
-        # return [int(i) for i in list(s)]
+        num = int(''.join(str(i) for i in digits))
+        s = str(num+1)
+        return [int(i) for i in list(s)]
 
         # n = int(''.join(str(i) for i in digits))
         # s = str(n+1)
         # return [int(i) for i in s]
+        print digits
+        digits[-1] += 1
+
+        print digits
+        for i in range(len(digits) - 1, 0, -1):
+            print i
+            if digits[i] != 10:
+                break
+            digits[i] = 0
+            digits[i - 1] += 1
+
+        if digits[0] == 10:
+            digits[0] = 0
+            return [1] + digits
+        return digits
 
        
 
